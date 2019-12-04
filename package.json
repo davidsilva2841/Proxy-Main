@@ -1,0 +1,20 @@
+{
+  "name": "Proxy-Main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsilva2841/Proxy-Main.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HRATX-45-FEC-West-Buy/Proxy-Main/issues"
+  },
+  "homepage": "https://github.com/HRATX-45-FEC-West-Buy/Proxy-Main#readme"
+}
