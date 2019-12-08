@@ -49,3 +49,40 @@ Consider using either Grunt (preferred) or Gulp.
 - memcache and/or redis
 - nginx
 
+## Phase 3A: Deploy both servers
+- Deploy both servers (service + proxy server), connect your deployed proxy to your deployed service as 
+well as your teammates' deployed services.
+- Your service should not use webpack-dev in production mode
+#### Required Tech:
+- AWS EC2
+- -OR-
+- Docker + EC2 (may require the use of Docker Hub)
+
+## Phase 3B: Front-end Optimization
+- If not already done so: serve all your JS bundles and CSS files from S3/cloudfront. 
+This will require a you to develop a build process. Consider using either Grunt (preferred) or Gulp.
+- Cross-browser test your implementation to see how it performs on different browsers and screen sizes. 
+Adjust your CSS to cover the main browsers: Chrome, FF, Safari, Edge for mobile (480) and Desktop (1280)
+
+
+## Phase 4: Advanced Content
+- Turn your Proxy Server into an App Server
+    - A Proxy Server is a "dumb" server, meaning it does nothing except serve up content from another server.
+    - An App Server has some smarts to it. Some things you might decide to do:
+        - Create multiple page layouts and assign different items to different layouts. To do this, you will
+         need to add a database and map item IDs to layouts.
+        - Allow your user to interact with a fully dynamic view for any given widget, even if the page is
+         rendered on the server. This will require you to render the React component on top of the already presented 
+         HTML and the component must be smart enough to not reinitialize/re-render itself.
+        - Combine all your webpack bundles into one bundle for faster page rendering.
+        - Send all API (from the client) back to your app server instead of the individual services. 
+        The App Server will then proxy the request back to the appropriate service's API Server.
+    - Build more than one page/experience or build additional modules/widgets for your selected experience.
+        - search results page
+        - category page (for browse)
+    - Modify your widgets to support the creation of new records or editing of existing records (via the UI). 
+    You will need to create a POST or PUT route on your server too.
+        - The app you are cloning may not support the creation/editing. In this case use your own creative judgement on
+         how your widget will support this feature.
+    - Add Open-Graph tags. This will require the proxy server to have its own database that stores page metadata for a 
+    given content ID.
