@@ -11,7 +11,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/', express.static(path.join(__dirname, 'public')));
+if (process.env.NODE_ENV === 'production') {
+    app.use('/', express.static(path.join(__dirname, 'public')));
+} else if (process.env.NODE_ENV === 'development') {
+    app.use('/', express.static(path.join(__dirname, 'public_testing')));
+}
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -30,3 +34,5 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
