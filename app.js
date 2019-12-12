@@ -13,6 +13,9 @@ app.use(cookieParser());
 
 if (process.env.NODE_ENV === 'production') {
     app.use('/', express.static(path.join(__dirname, 'public')));
+    app.use('/products', express.static(path.join(__dirname, 'public')));
+    app.use('/products/:id?', express.static(path.join(__dirname, 'public')));
+    // app.get('/products/:id', express.static(path.join(__dirname, 'public')));
 } else if (process.env.NODE_ENV === 'development') {
     app.use('/', express.static(path.join(__dirname, 'public_testing')));
 }
@@ -30,7 +33,8 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  // res.render('error');
+  res.send('error');
 });
 
 module.exports = app;
