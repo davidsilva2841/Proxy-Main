@@ -1,5 +1,5 @@
 # SQL database schema
-
+DROP DATABASE IF EXISTS  WestBuy;
 CREATE DATABASE IF NOT EXISTS WestBuy;
 USE WestBuy;
 
