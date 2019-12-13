@@ -15,13 +15,13 @@ if (process.env.NODE_ENV === 'production') {
     app.use('/', express.static(path.join(__dirname, 'public')));
     app.use('/products', express.static(path.join(__dirname, 'public')));
     app.use('/products/:id?', express.static(path.join(__dirname, 'public')));
-    app.use('/testing-image-feature/:id?', express.static(path.join(__dirname, 'testing/image_feature/')));
-    app.use('/testing-image-feature/:id?', express.static(path.join(__dirname, 'testing/image_feature/')));
-    app.use('/testing-image-feature/:id?', express.static(path.join(__dirname, 'testing/image_feature/')));
-    app.use('/testing-image-feature/:id?', express.static(path.join(__dirname, 'testing/image_feature/')));
-    app.use('/testing-image-feature/:id?', express.static(path.join(__dirname, 'testing/image_feature/')));
 
-    // app.get('/products/:id', express.static(path.join(__dirname, 'public')));
+    // Routes for testing
+    app.use('/testing-navbar/:id?', express.static(path.join(__dirname, 'testing/navbar/')));
+    app.use('/testing-product-info/:id?', express.static(path.join(__dirname, 'testing/component/')));
+    app.use('/testing-image-feature/:id?', express.static(path.join(__dirname, 'testing/image_feature/')));
+    app.use('/testing-carousel/:id?', express.static(path.join(__dirname, 'testing/carousel/')));
+    app.use('/testing-accordion-drawers/:id?', express.static(path.join(__dirname, 'testing/accordion_drawers/')));
 } else if (process.env.NODE_ENV === 'development') {
     app.use('/', express.static(path.join(__dirname, 'public_testing')));
 }
