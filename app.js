@@ -22,6 +22,7 @@ if (process.env.NODE_ENV === 'production') {
     app.use('/testing-image-feature/:id?', express.static(path.join(__dirname, 'testing/image_feature/')));
     app.use('/testing-carousel/:id?', express.static(path.join(__dirname, 'testing/carousel/')));
     app.use('/testing-accordion-drawers/:id?', express.static(path.join(__dirname, 'testing/accordion_drawers/')));
+    app.use('/testing-footer/:id?', express.static(path.join(__dirname, 'testing/footer/')));
 } else if (process.env.NODE_ENV === 'development') {
     app.use('/', express.static(path.join(__dirname, 'public_testing')));
 }
