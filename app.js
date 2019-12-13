@@ -16,6 +16,10 @@ if (process.env.NODE_ENV === 'production') {
     app.use('/products', express.static(path.join(__dirname, 'public')));
     app.use('/products/:id?', express.static(path.join(__dirname, 'public')));
     app.use('/testing-image-feature/:id?', express.static(path.join(__dirname, 'testing/image_feature/')));
+    app.use('/testing-image-feature/:id?', express.static(path.join(__dirname, 'testing/image_feature/')));
+    app.use('/testing-image-feature/:id?', express.static(path.join(__dirname, 'testing/image_feature/')));
+    app.use('/testing-image-feature/:id?', express.static(path.join(__dirname, 'testing/image_feature/')));
+    app.use('/testing-image-feature/:id?', express.static(path.join(__dirname, 'testing/image_feature/')));
 
     // app.get('/products/:id', express.static(path.join(__dirname, 'public')));
 } else if (process.env.NODE_ENV === 'development') {
