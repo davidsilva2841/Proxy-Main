@@ -4,5 +4,23 @@ body {
 }
 
 #image-feature-container{
+    position: absolute;
     align-self: flex-start;
+    top: 100px;
+    /*left: ;*/
+    /*left: 300px;*/
+    /*bottom: 10px;*/
+    background-color: green;
 }
+
+#product-info-container{
+    padding-bottom : 400px;
+}
+
+#pi-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: 1600px;
+}
+
