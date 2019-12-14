@@ -8,25 +8,16 @@
 }
 
 #image-feature-container{
-    /*background-color: red;*/
-    display: block;
     position: absolute;
     top: 170px;
     left: 100px;
 }
-
-
-
 
 @media (min-width: 1600px) {
     #pi-container {
         width: 1600px;
         margin: auto;
     }
-    /*#carousel-container {*/
-    /*    margin: auto;*/
-    /*    width: 1600px !important;*/
-    /*}*/
 }
 
 
