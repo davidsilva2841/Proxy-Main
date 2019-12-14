@@ -6,11 +6,11 @@ body {
 #image-feature-container{
     position: absolute;
     align-self: flex-start;
-    top: 100px;
-    /*left: ;*/
+    top: 15%;
+    left: 10%;
     /*left: 300px;*/
     /*bottom: 10px;*/
-    background-color: green;
+    /*background-color: green;*/
 }
 
 #product-info-container{
