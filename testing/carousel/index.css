@@ -1,0 +1,8 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#image-feature-container{
+    align-self: flex-start;
+}
