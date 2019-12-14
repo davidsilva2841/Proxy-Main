@@ -19,6 +19,7 @@ if (process.env.NODE_ENV === 'production') {
     // Routes for testing
     app.use('/testing-navbar/:id?', express.static(path.join(__dirname, 'testing/navbar/')));
     app.use('/testing-product-info/:id?', express.static(path.join(__dirname, 'testing/product_info/')));
+    app.use('/testing-product-info-d/:id?', express.static(path.join(__dirname, 'testing/product_info_d/')));
     app.use('/testing-image-feature/:id?', express.static(path.join(__dirname, 'testing/image_feature/')));
     app.use('/testing-carousel/:id?', express.static(path.join(__dirname, 'testing/carousel/')));
     app.use('/testing-accordion-drawers/:id?', express.static(path.join(__dirname, 'testing/accordion_drawers/')));
