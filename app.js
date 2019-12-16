@@ -28,6 +28,11 @@ if (process.env.NODE_ENV === 'production') {
     app.use('/', express.static(path.join(__dirname, 'public_testing')));
 }
 
+
+app.get('/', (req, res) => {
+    res.redirect('/products/1')
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
