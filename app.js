@@ -14,8 +14,9 @@ app.use(cookieParser());
 // --------------------------------------------------------------------------------------------------
 
 if (process.env.NODE_ENV === 'production') {
-    app.use('/products', express.static(path.join(__dirname, 'routes/public')));
-    app.use('/products/:id?', express.static(path.join(__dirname, 'routes/public')));
+
+    app.use('/products', express.static(path.join(__dirname, '/routes/public/')));
+    app.use('/products/:id?', express.static(path.join(__dirname, '/routes/public/')));
 
     // Routes for testing
     app.use('/testing/:id?', express.static(path.join(__dirname, 'routes/testing/public/')));
