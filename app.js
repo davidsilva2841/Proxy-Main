@@ -14,18 +14,11 @@ app.use(cookieParser());
 // --------------------------------------------------------------------------------------------------
 
 if (process.env.NODE_ENV === 'production') {
-
     app.use('/products', express.static(path.join(__dirname, '/routes/public/')));
     app.use('/products/:id?', express.static(path.join(__dirname, '/routes/public/')));
 
     // Routes for testing
-    app.use('/testing/:id?', express.static(path.join(__dirname, 'routes/testing/public/')));
     app.use('/testing-navbar/:id?', express.static(path.join(__dirname, 'routes/testing/navbar/')));
-    app.use('/testing-product-info/:id?', express.static(path.join(__dirname, 'routes/testing/product_info/')));
-    app.use('/testing-image-feature/:id?', express.static(path.join(__dirname, 'routes/testing/image_feature/')));
-    app.use('/testing-carousel/:id?', express.static(path.join(__dirname, 'routes/testing/carousel/')));
-    app.use('/testing-accordion-drawers/:id?', express.static(path.join(__dirname, 'routes/testing/accordion_drawers/')));
-    app.use('/testing-footer/:id?', express.static(path.join(__dirname, 'routes/testing/footer/')));
 } else if (process.env.NODE_ENV === 'development') {
     app.use('/', express.static(path.join(__dirname, 'public_testing')));
 }

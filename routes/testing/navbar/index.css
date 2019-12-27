@@ -1,8 +1,23 @@
-body {
-    display: flex;
-    flex-direction: column;
+.product-info-column-one {
+    padding-bottom: 275px;
+}
+
+#pi-container {
+    position: relative;
+    width: 1600px;
 }
 
 #image-feature-container{
-    align-self: flex-start;
+    position: absolute;
+    top: 170px;
+    left: 100px;
 }
+
+@media (min-width: 1600px) {
+    #pi-container {
+        width: 1600px;
+        margin: auto;
+    }
+}
+
+
