@@ -4,6 +4,7 @@ function addScript( src ) {
     document.body.appendChild( s );
 }
 
+
 setTimeout(() => {
     addScript('https://westbuy.s3.amazonaws.com/public/bundles/stars-bundle.js');
 }, 3000);
