@@ -5,6 +5,5 @@ function addScript( src ) {
 }
 
 setTimeout(() => {
-    console.log('Loading stars script');
     addScript('https://pi-stars.us-east-2.elasticbeanstalk.com/star-bundle.js');
 }, 3000);
