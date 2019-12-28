@@ -5,5 +5,5 @@ function addScript( src ) {
 }
 
 setTimeout(() => {
-    addScript('https://pi-stars.us-east-2.elasticbeanstalk.com/star-bundle.js');
+    addScript('https://westbuy.s3.amazonaws.com/public/bundles/stars-bundle.js');
 }, 3000);
